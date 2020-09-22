@@ -1,6 +1,6 @@
 \section{Resultados}
 
-A partir dos testes realizados sob orientação do planejamento, anteriormente dito na sessão X, foram coletadas os resultados do tempo de vôo do helicóptero. As amostras dos testes coletados, como pode ser visto na tabela \ref{tab:amostras}, possui os seguintes parâmetros: clip que pode ser com ou sem; AT que representa o adesivo no topo do helicóptero, sendo com ou sem; ADLat é o adesivo lateral, podendo ser colocado o adesivo do lado direito ou do lado esquerdo; AL é a altura de partida do helicóptero, em que foi definido como 1,30 metros e 2,10 metros e o tempo de queda em segundos. Dessa forma, com base nestes valores de tempo, a partir das disposições dos demais parâmetros, foi feito o teste de regressão para analisar a influência da relação entre os parâmetros com o tempo.
+A partir dos testes realizados sob orientação do planejamento, anteriormente mencionado na seção X, foram coletados os resultados do tempo de vôo do helicóptero. As amostras dos testes coletados, como pode ser visto na tabela \ref{tab:amostras}, possui os seguintes parâmetros: \textbf{clipe} que pode ser com ou sem; \textbf{AT} que representa o adesivo no topo do helicóptero, sendo com ou sem; \textbf{ADLat} é o adesivo lateral, podendo ser colocado o adesivo do lado direito ou do lado esquerdo; \textbf{AL} é a altura de partida do helicóptero, em que foi definido como 1,30 m e 2,10 m e o tempo de queda em segundos. Dessa forma, com base nestes valores de tempo, a partir das disposições dos demais parâmetros, foi feito o teste de regressão para analisar a influência da relação entre os parâmetros com o tempo.
 
 \begin{table}[ht]
     \centering
@@ -30,13 +30,12 @@ A partir dos testes realizados sob orientação do planejamento, anteriormente d
     \label{tab:amostras}
 \end{table}
 
-Para analise de regressão deste sistema foi divido em 2 modelos: primeiro e segunda ordem. Como o sistema possui 4 variáveis independentes, o modelo máximo atingido pode ser representado pela relação entre os 4 parâmetros. Porém, a partir do terceiro modelo não há mais significância entre os resultados obtidos, que será mostrado em diante, descartando assim a análise com mais relações. 
+A análise de regressão deste sistema foi divida em 2 modelos: primeira e segunda ordem. Como o sistema possui 4 variáveis independentes, o modelo máximo atingido pode ser representado pela relação entre os 4 parâmetros. Porém, a partir do terceiro modelo não há mais significância entre os resultados obtidos, que será mostrado em diante, descartando assim a análise com um número maior de relações. 
 
 \subsection{Análise de Primeira Ordem - Modelo 1}
 
-A partir da análise linear aplicada aos resultados das amostras, aplicando a primeira ordem, o resultado é mostrado na tabela \ref{tab:model1}. O primeiro modelo dessa análise pode ser visualizada na equação \ref{eq:model1}. Esta equação mostra um modelo que consegue explicar o valor do tempo a partir da relação entre os parâmetros. Os valores dentro dos parâmetros são as variáveis que mais apresentaram valores significantes ao sistema, dentre as opções estabelecidas. 
+A partir da análise linear aplicada aos resultados das amostras, aplicando-se a primeira ordem, o resultado é mostrado na tabela \ref{tab:model1}. O primeiro modelo dessa análise pode ser visualizado na Equação \ref{eq:model1}. Esta equação mostra um modelo que consegue explicar o valor do tempo a partir da relação entre os parâmetros. Os valores dentro dos parâmetros são as variáveis que mais apresentaram valores significantes ao sistema, dentre as opções estabelecidas. 
 
-%Tabela do modelo 1 completa
 \begin{table}[ht]
     \centering
     \caption{Resultado da análise linear de primeira ordem do modelo 1.}
@@ -56,13 +55,13 @@ A partir da análise linear aplicada aos resultados das amostras, aplicando a pr
 
 \begin{align}
     \begin{split}
-    tempo & = 1.062187 - 0.141875. clip(C) + 0.011875 . AT(C) \\ 
-    & + 0.008125.ADLat(D) + 0.584375 . AL(2.10)
+    tempo &= 1.062187 - 0.141875\text{.clip(C)} + 0.011875\text{.AT(C)} \\
+    & + 0.008125\text{.ADLat(D)} + 0.584375\text{.AL2,10}
     \end{split}
     \label{eq:model1}
 \end{align}
 
-Com base na tabela \ref{tab:model1}, pode ser visto que estatisticamente os estimadores dos parâmetros clip, AT e ADLat são iguais a zero, pois, se assumir o nível de significância a 5\% de probabilidade, o $\rho$ valor desses coeficientes é superior a 0.05, aceitando a hipótese nula, ou seja, as estimativas desses parâmetros são números muitos próximos de zero no qual no teste t afirma que esses valores aceitam a hipótese H0. Portanto, se os parâmetros clip, AT e ADLat são estatisticamente iguais a zero, eles não precisam estar no modelo pois não vai ter nenhuma contribuição significante no valor de tempo de queda do helicóptero. Então, refazendo a análise linear do tempo de queda com relação apenas ao parâmetro AL, o novo modelo pode ser representado pela equação \ref{eq2:model1}. O resultado dos coeficientes pode ser visto na tabela \ref{tab2:model1}.  
+Com base na tabela\ref{tab:model1}, pode ser visto que estatisticamente os estimadores dos parâmetros clipe, AT e ADLat são iguais a zero, pois, ao se assumir o nível de significância a 5\% de probabilidade, o $\rho$ valor desses coeficientes é superior a 0,05, aceitando a hipótese nula, ou seja, as estimativas desses parâmetros são números muitos próximos de zero no qual pelo teste t afirma-se que esses valores aceitam a hipótese $H_0$. Portanto, se os parâmetros clipe, AT e ADLat são estatisticamente iguais a zero, eles não precisam estar no modelo pois não vai ter nenhuma contribuição significante no valor de tempo de queda do helicóptero. Então, o novo modelo pode ser representado na equação \ref{eq2:model1}, refazendo-se a análise linear do tempo de queda com relação apenas ao parâmetro AL. O resultado dos coeficientes pode ser visto na tabela\ref{tab:model1}. 
 
 \begin{table}[ht]
     \centering
@@ -78,14 +77,14 @@ Com base na tabela \ref{tab:model1}, pode ser visto que estatisticamente os esti
     \label{tab2:model1}
 \end{table}
 
-\begin{equation}
-    tempo = 1.00125 + 0.58438.AL(2.10)
+\begin{align}
+    tempo = 1.00125 + 0.58438\text{.AL2,10}
     \label{eq2:model1}
-\end{equation}
+\end{align}
 
-O modelo apresentado na equação \ref{eq:model1}, que representa uma regressão múltipla, foi reduzido para uma regressão simples, representado pela equação \ref{eq2:model1}. Desse modo, para explicar a equação reduzida pode-se dizer que para cada acréscimo a partir da altura de 2,10 metros, o tempo de queda aumenta em 0,58 segundos. Com base no valor do $R^2$, que foi de 78,56\%, pode se afirmar a porcentagem do dados que são explicado pelo modelo da equação \ref{eq2:model1}. O valor do $R^2$ ajustado será desconsiderado pois esse último modelo foi o único em que todos os estimadores dos parâmetros foram significativo, no caso dessa análise linear do modelo 1. 
+O modelo apresentado na equação \ref{eq:model1}, que representa uma regressão múltipla, foi reduzido para uma regressão simples, representado pela equação \ref{eq2:model1}. Desse modo, para explicar a equação reduzida pode-se dizer que para cada acréscimo a partir da altura de 2,10 m, o tempo de queda aumenta em 0,58 s. Com base no valor do $R^2$, que foi de 78,56\%, pode se afirmar a porcentagem do dados que são explicados pelo modelo da equação \ref{eq2:model1}. O valor do $R^2$ ajustado será desconsiderado pois esse último modelo foi o único em que todos os estimadores dos parâmetros foram significativos, no caso dessa análise linear do modelo 1. 
 
-Analisando os resíduos do modelo 1 simplificado, foi aplicado o teste de normalidade de \textit{Shapiro-Wilk}. Nesse teste pode-se afirmar que, a partir da verificação dos resíduos desse modelo mostrou-se que no teste da normalidade apresentou um valor da análise de 0.97528 com o $\rho$ valor respectivo de 0,9152, adotando o nível de significância de 5\%, não houve violação da normalidade dos resíduos. Então, pode-se concluir que esses erros (resíduos) tem uma distribuição normal, como pode ser visto nos gráficos das figuras \ref{fig:qq} e \ref{fig:hist}. Dessa forma, assumisse a independência dos resíduos pelo fato que a estrutura de coleta declara essa independência. Portanto, não é preciso atribuir testes de independência.
+Analisando os resíduos do modelo 1 simplificado, foi aplicado o teste de normalidade de \textit{Shapiro-Wilk}. Nesse teste pode-se afirmar que, a partir da verificação dos resíduos desse modelo mostrou-se que no teste da normalidade apresentou um valor de 0,97528 com o $\rho$ valor respectivo de 0,9152, e adotando o nível de significância de 5\%, não houve violação da normalidade dos resíduos. Então, pode-se concluir que esses erros (resíduos) tem uma distribuição normal, como pode ser visto nos gráficos das figuras \ref{fig:qq} e \ref{fig:hist}. Dessa forma, assume-se a independência dos resíduos pelo fato que a estrutura de coleta declara essa independência. Portanto, não é preciso atribuir testes de independência.
 
 \begin{figure}
     \centering
@@ -135,13 +134,13 @@ No modelo 2 foi feito a análise linear de segunda ordem. O resultado dessa aná
 
 \begin{align}
     \begin{split}
-    tempo & = 0.93906 - 0.15.clip(C) + 0.21375.AT(C) + 0.1425.ADLat(D) \\
-    & + 0.74875.AL(2.10) + 0.04125.clip(C).AT(C) \\
-    & + 0.14375.clip(C).ADLat(D) - 0.16875.clip(C).AL(2.10) \\
-    & - 0.34875.AT(C).ADLat(D) - 0.09625.AT(C).AL(2.10) \\ 
-    & - 0.06375.ADLat(D).AL(2.10)
+    tempo &= 0.93906 - 0.15\text{.clipC} + 0.21375\text{.ATC} + 0.1425\text{.ADLatD}  \\
+    & + 0.74875\text{.AL2,10} + 0.04125\text{.clipC.ATC} + 0.14375\text{.clipC.ADLatD} \\
+    & - 0.16875\text{.clipC.AL2,10} - 0.34875\text{.ATC.ADLatD} - 0.09625\text{.ATC.AL2,10} \\
+    & - 0.06375\text{.ADLatD.AL2,10}
     \end{split}
-    \label{eq:model2}
+\label{eq:model2}
 \end{align}
 
-Essa equação do modelo 2 consegue explicar o valor do tempo a partir da relação de segunda ordem dos parâmetros. Como pode ser visto na tabela \ref{tab:model2}, o parâmetro que possui os estimadores mais significantes, se assumir o nível de significância de 5\%, é novamente o AL, ou seja, estatisticamente os valores do $\rho$ valor são maiores que 0.05 em todos exceto o AL2.10. Como isso considera a hipótese nula em que as estimativas desses coeficientes possuem valores muito próximo de zero, podendo também ser retirado da equação da relação de segunda ordem, pois, estatisticamente esses parâmetros não apresentam contribuição significativa no valor do tempo de queda do helicóptero. Desta maneira, simplificando a equação \ref{eq:model2} do modelo 2 irá ficar da mesma forma que a equação \ref{eq2:model1}, propiciando o encerramento da análise de regressão para o modelo 2.
+Essa equação do modelo 2 consegue explicar o valor do tempo a partir da relação de segunda ordem dos parâmetros. Como pode ser visto na tabela \ref{tab:model2}, o parâmetro que possui os estimadores mais significantes, se assumir o nível de significância de 5\%, é novamente o AL, ou seja, estatisticamente os valores do $\rho$ valor são maiores que 0.05 em todos exceto o AL2,10. Como isso considera a hipótese nula em que as estimativas desses coeficientes possuem valores muito próximo de zero, podendo também ser retirado da equação da relação de segunda ordem, pois, estatisticamente esses parâmetros não apresentam contribuição significativa no valor do tempo de queda do helicóptero. Desta maneira, simplificando a equação \ref{eq:model2} do modelo 2 irá ficar da mesma forma que a equação \ref{eq2:model1}, propiciando o encerramento da análise de regressão para o modelo 2.
+ 
