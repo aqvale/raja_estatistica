@@ -8,7 +8,13 @@
 \usepackage{graphicx}	
 \usepackage{ragged2e} 
 \usepackage{authblk}
-\usepackage{hyperref}		
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{xcolor}	
 %
 \newcommand*{\email}[1]{%
     \normalsize\href{mailto:#1}{#1}\par
@@ -22,8 +28,8 @@
 \end{figure}
 
 \title{Estudo estatístico \\ Análise de Regressão} 
-\author{Anderson Queiroz}
-\affil{Senai Cimatec. CCRoSA - Centro de Competência em Robótica e Sitemas Autônomos \\ \email{anderson.vale@fbter.org.br}}
+\author{Anderson Queiroz  \\ Rodrigo Formiga \\ Jean Silva \\ Aziel Freitas}
+\affil{Senai CIMATEC. CCRoSA - Centro de Competência em Robótica e Sistemas Autônomos \\ \email{anderson.vale@fbter.org.br \\ rodrigo.farias@fbter.org.br \\ jean.silva@fbter.org.br \\ aziel.freitas@fbter.org.br}}
 
  
 
@@ -33,9 +39,11 @@
 
     \include{sections/01introducao} % Jean
 	\include{sections/02literatura} % Rodrigo
+    \include{sections/02metodologia}
 	\include{sections/03resultados} % Anderson
 	\include{sections/04conclusao}  % Aziel
 
-
-   
+% Referências
+    \begin{frame}{}
+    \bibliographystyle{apalike} \bibliography{bibliography.bib} \end{frame}
 \end{document}
