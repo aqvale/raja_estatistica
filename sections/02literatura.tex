@@ -75,10 +75,11 @@ A análise de regressão é dividida em alguns tipos, tendo cada uma sua própri
 
 \subsubsection*{Regressão linear}
 
-A regressão Linear é um modelo matemático que tem por objetivo observar a relação entre duas ou mais variáveis por meio de uma reta, e utilizar o resultado da função dessa reta para estimar valores e encontrar relações. Quando existe apenas uma variável independente e uma variável dependente, ela é chamada de \textbf{regressão linear simples}. Quando existe mais de uma variável independente, é chamado de \textbf{regressão linear múltipla}. Na equação de regressão linear múltipla, apresentada a seguir, o 'Y' é a variável dependente, 'X' são as variáveis independentes, $\beta_i$ são os coeficientes de regressão e $\epsilon$ é o termo de erro\cite{5}. 
+A regressão Linear é um modelo matemático que tem por objetivo observar a relação entre duas ou mais variáveis por meio de uma reta, e utilizar o resultado da função dessa reta para estimar valores e encontrar relações. Quando existe apenas uma variável independente e uma variável dependente, ela é chamada de \textbf{regressão linear simples}. Quando existe mais de uma variável independente, é chamado de \textbf{regressão linear múltipla}. Na equação de regressão linear múltipla, (equação \ref*{eq:regressao}), o 'Y' é a variável dependente, 'X' são as variáveis independentes, $\beta_i$ são os coeficientes de regressão e $\epsilon$ é o termo de erro\cite{5}. 
 
 \begin{equation}
-    Y = \beta_1 + \beta_2X_2 + \beta_3X_3 + ... + \beta_iX_i + \epsilon    
+    Y = \beta_1 + \beta_2X_2 + \beta_3X_3 + ... + \beta_iX_i + \epsilon  
+    \label{eq:regressao}  
 \end{equation}
 
 Como exemplo de uma análise de regressão linear no R (figura \ref*{fig:R}), será analisado os dados a seguir e entender as informações contidas no estudo.
@@ -107,33 +108,3 @@ São os valores que serão multiplicados pelas variáveis independentes para obt
 \subsection*{P-value}
 
 Servem para avaliar a hipótese núla. Em valores inferiores a 0.05 é rejeitado a hipótese núla e a variável não deve ser descartada ou ignorada para o estudo. No caso da figura \ref*{fig:R}, a variável "Education" apresenta p-value muito pequeno e menor que 0.05, logo, esta variável influencia fortemente a variável de saída\cite{5}.
-
-
-% @misc{1,
-%   title = {PLANEJAMENTO DE EXPERIMENTO},
-%   author = {Portal Action},
-%   year = {s.d.},
-%   howpublished = {https://bit.ly/3iT20qZ},
-% }
-
-% @misc{2,
-%   title = {Planejamento - Revisão},
-%   author = {UFPR},
-%   year = {s.d.},
-%   howpublished = {http://cursos.leg.ufpr.br/ce072/slides-pdf/01-planej-revisao.pdf},
-% }
-
-% @misc{3,
-%   title = {Planejamento de Experimentos (DOE)},
-%   author = {Sayuri Tahara},
-%   year = {2008},
-%   month = {12},
-%   howpublished = {http://www.portaldeconhecimentos.org.br/index.php/por/Conteudo/Planejamento-de-Experimentos-DOE},
-% }
-
-% @misc{4,
-%   title = {http://www.dpi.ufv.br/~peternelli/inf162.www.16032004/materiais/CAPITULO9.pdf},
-%   author = {Luiz Alexandre Peternelli},
-%   year = {s.d.},
-%   howpublished = {http://www.dpi.ufv.br/~peternelli/inf162.www.16032004/materiais/CAPITULO9.pdf},
-% }
